@@ -29,10 +29,9 @@ def bubble_sort(list: list):
     swapped = True
     
     while swapped:
+        swapped = False
         for j in range(len(list) -1):
-            if list[j] < list[j + 1]:
-                swapped = False
-            else:
+            if list[j] > list[j + 1]:
                 list[j], list[j+1] = list[j+1], list[j]
                 swapped = True
     print(list)
